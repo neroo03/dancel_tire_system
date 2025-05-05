@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$dbname = 'dancel_tire_supply(1)';
+$dbname = 'dancel_tire_supply';
 $username = 'root';
 $password = '';
 $base_url = 'http://localhost/dancel_tire_system/';

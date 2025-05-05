@@ -10,7 +10,7 @@ if (!isset($_GET['id'])) {
 $transactionId = $_GET['id'];
 
 // Get transaction header
-$stmt = $pdo->prepare("SELECT st.*, c.Name as CustomerName, c.ContactInfo, e.Name as EmployeeName
+$stmt = $pdo->prepare("SELECT st.*, c.FullName as CustomerName, c.ContactInfo, e.Name as EmployeeName
                       FROM salestransaction st
                       LEFT JOIN customer c ON st.CustomerID = c.CustomerID
                       LEFT JOIN employee e ON st.EmployeeID = e.EmployeeID

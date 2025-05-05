@@ -1,13 +1,11 @@
 <?php
 include '../includes/auth.php';
 include '../includes/config.php';
-
 // Date range filter
 $startDate = $_GET['start_date'] ?? date('Y-m-01');
 $endDate = $_GET['end_date'] ?? date('Y-m-t');
-
 // Get sales transactions
-$stmt = $pdo->prepare("SELECT st.*, c.Name as CustomerName, e.Name as EmployeeName 
+$stmt = $pdo->prepare("SELECT st.*, c.FullName as CustomerName, e.Name as EmployeeName 
                       FROM salestransaction st
                       LEFT JOIN customer c ON st.CustomerID = c.CustomerID
                       LEFT JOIN employee e ON st.EmployeeID = e.EmployeeID

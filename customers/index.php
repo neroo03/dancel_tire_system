@@ -1,8 +1,6 @@
 <?php
 include '../includes/auth.php';
 include '../includes/config.php';
-
-// Handle customer deletion
 if (isset($_GET['delete'])) {
     $customerId = $_GET['delete'];
     try {
@@ -15,10 +13,8 @@ if (isset($_GET['delete'])) {
     header("Location: index.php");
     exit;
 }
-
 // Get all customers
 $customers = $pdo->query("SELECT * FROM customer ORDER BY Name")->fetchAll();
-
 include '../includes/header.php';
 ?>
 

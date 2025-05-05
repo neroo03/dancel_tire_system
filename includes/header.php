@@ -39,45 +39,45 @@ if (session_status() === PHP_SESSION_NONE) {
     <div id="layoutSidenav">
         <div id="layoutSidenav_nav">
         <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-    <div class="sb-sidenav-menu">
-        <div class="nav">
-            
-            <a class="nav-link active" href="dashboard.php">
-                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                Dashboard
-            
-                </a>
-                </a>
-            
-            <a class="nav-link" href="sales/index.php">
-                <div class="sb-nav-link-icon"><i class="fas fa-shopping-cart"></i></div>
-                Sales
-            </a>
-            <a class="nav-link" href="inventory/index.php">
-                <div class="sb-nav-link-icon"><i class="fas fa-boxes"></i></div>
-                Inventory
-            </a>
-            <a>
-            <a class="nav-link" href="products/index.php">
-                <div class="sb-nav-link-icon"><i class="fas fa-tags"></i></div>
-                Products
-            </a>
-            <a class="nav-link" href="customers/index.php">
-                <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
-                Customers
-            </a>
-            
-            <a class="nav-link" href="reports/sales.php">
-                <div class="sb-nav-link-icon"><i class="fas fa-file-invoice-dollar"></i></div>
-                Sales Reports
-            </a>
-            <a class="nav-link" href="reports/inventory.php">
-                <div class="sb-nav-link-icon"><i class="fas fa-clipboard-list"></i></div>
-                Inventory Reports
-            </a>
-        </div>
-    </div>
-</nav>
+            <div class="sb-sidenav-menu">
+                <div class="nav">
+                    
+                    <a class="nav-link active" href="dashboard.php">
+                        <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                        Dashboard
+                    
+                        </a>
+                        </a>
+                    
+                    <a class="nav-link" href="sales/index.php">
+                        <div class="sb-nav-link-icon"><i class="fas fa-shopping-cart"></i></div>
+                        Sales
+                    </a>
+                    <a class="nav-link" href="inventory/index.php">
+                        <div class="sb-nav-link-icon"><i class="fas fa-boxes"></i></div>
+                        Inventory
+                    </a>
+                    <a>
+                    <a class="nav-link" href="products/index.php">
+                        <div class="sb-nav-link-icon"><i class="fas fa-tags"></i></div>
+                        Products
+                    </a>
+                    <a class="nav-link" href="customers/index.php">
+                        <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                        Customers
+                    </a>
+                    
+                    <a class="nav-link" href="reports/sales.php">
+                        <div class="sb-nav-link-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                        Sales Reports
+                    </a>
+                    <a class="nav-link" href="reports/inventory.php">
+                        <div class="sb-nav-link-icon"><i class="fas fa-clipboard-list"></i></div>
+                        Inventory Reports
+                    </a>
+                </div>
+            </div>
+        </nav>
         </div>
         
         <div id="layoutSidenav_content">

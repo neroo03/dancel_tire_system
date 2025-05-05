@@ -3,7 +3,8 @@ include '../includes/auth.php';
 include '../includes/config.php';
 
 // Handle inventory updates
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_inventory'])) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_inventory'], $_POST['quantities']) && is_array($_POST['quantities'])) {
+
     try {
         $pdo->beginTransaction();
         

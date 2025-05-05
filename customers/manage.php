@@ -1,7 +1,7 @@
 <?php
+
 include '../includes/auth.php';
 include '../includes/config.php';
-
 // Handle form submission
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
