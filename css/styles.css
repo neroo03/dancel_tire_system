@@ -1,0 +1,229 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sb-topnav {
+    z-index: 1039;
+}
+
+#layoutSidenav {
+    display: flex;
+}
+
+#layoutSidenav #layoutSidenav_nav {
+    flex-basis: 225px;
+    flex-shrink: 0;
+    transition: transform 0.15s ease-in-out;
+    z-index: 1038;
+    transform: translateX(-225px);
+}
+
+#layoutSidenav #layoutSidenav_nav .sb-sidenav {
+    height: 100vh;
+    padding-top: 56px;
+}
+
+#layoutSidenav #layoutSidenav_content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 0;
+    flex-grow: 1;
+    min-height: 100vh;
+    margin-left: -225px;
+}
+
+.sb-sidenav-dark {
+    background-color: #212529;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link:hover {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link.active {
+    color: #fff;
+}
+
+.sb-sidenav-dark .sb-sidenav-footer {
+    background-color: #343a40;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    margin-bottom: 1.5rem;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e3e6f0;
+    font-weight: 600;
+}
+
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+}
+
+.form-control, .form-select {
+    border-radius: 0.35rem;
+}
+
+.btn {
+    border-radius: 0.35rem;
+}
+
+@media (min-width: 992px) {
+    #layoutSidenav #layoutSidenav_nav {
+        transform: translateX(0);
+    }
+    
+    #layoutSidenav #layoutSidenav_content {
+        margin-left: 0;
+        transition: margin 0.15s ease-in-out;
+    }
+    
+    body.sb-sidenav-toggled #layoutSidenav #layoutSidenav_nav {
+        transform: translateX(-225px);
+    }
+    
+    body.sb-sidenav-toggled #layoutSidenav #layoutSidenav_content {
+        margin-left: -225px;
+    }
+}
+/* Make sure links are clickable */
+.nav-link {
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+/* Remove any pointer-events blocking */
+.sb-sidenav-menu {
+    pointer-events: auto !important;
+}
+
+/* Active state styling */
+.nav-link.active {
+    background-color: rgba(255,255,255,0.1);
+}
+
+/* Force clickable links */
+.nav-link {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+/* Remove any overlay blocking clicks */
+.sb-sidenav {
+    z-index: 1000;
+    position: relative;
+}
+
+/* Fix clickable navigation */
+.sb-sidenav .nav-link {
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+}
+
+/* Active state */
+.sb-sidenav .nav-link.active {
+    background: rgba(255,255,255,0.1);
+    border-left: 3px solid #4e73df;
+}
+
+/* Hover effect */
+.sb-sidenav .nav-link:hover {
+    background: rgba(255,255,255,0.05);
+}
+
+/* Fix z-index issues */
+.sb-sidenav {
+    z-index: 1000;
+    position: relative;
+}
+
+/* Remove any click blockers */
+.sb-sidenav-menu {
+    pointer-events: auto !important;
+}
+
+/* Keep sidebar always open on desktop */
+@media (min-width: 768px) {
+    .sb-sidenav {
+        transform: none !important;
+        width: 225px !important;
+    }
+    body:not(.sb-sidenav-toggled) .sb-sidenav {
+        margin-left: 0 !important;
+    }
+}
+/* Smooth transitions */
+.sb-sidenav {
+    transition: transform 0.15s ease-in-out;
+}
+/* Add spacing between menu sections */
+.menu-section {
+    margin-bottom: 1.5rem; /* Adjust this value as needed */
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Remove border from last section */
+.menu-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+/* Adjust heading spacing */
+.sb-sidenav-menu-heading {
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Add spacing between menu items */
+.nav-link {
+    margin-bottom: 0.25rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+}
+
+/* Section background differentiation */
+.menu-section {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+/* Hover effects */
+.menu-section:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* For more spacing */
+.menu-section {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+/* For less spacing */
+.menu-section {
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+}
